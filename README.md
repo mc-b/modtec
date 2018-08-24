@@ -1,4 +1,4 @@
-# Beispiele zum Kurs: [4A1]()
+# Beispiele zum Kurs: [IoT, Microservices, Machine Learning und DevOps – Moderne architektur-relevante Methoden und Technologien («MODTEC»)](https://www.digicomp.ch/trends/devops-trainings/iot-microservices-machine-learning-und-devops-moderne-architektur-relevante-methoden-und-technologien)
 
 ### Quick Start
 
@@ -8,7 +8,7 @@ Projekt [lernkube](https://github.com/mc-b/lernkube), auf der Git/Bash Kommandoz
 
 	git clone https://github.com/mc-b/lernkube
 	cd lernkube
-	cp templates/4A1.yaml config.yaml
+	cp templates/MODTEC.yaml config.yaml
 	vagrant plugin install vagrant-disksize
 	vagrant up
 
