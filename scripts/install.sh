@@ -17,13 +17,13 @@ kubectl apply -f https://raw.githubusercontent.com/mc-b/iot.kafka/master/iot-kaf
 kubectl apply -f https://raw.githubusercontent.com/mc-b/iot.kafka/master/iot-kafka-pipe.yaml
 
 # BPMN Umgebung und Upload BPMN Prozess
-# sudo docker pull camunda/camunda-bpm-platform
+sudo docker pull camunda/camunda-bpm-platform
 kubectl apply -f https://raw.githubusercontent.com/mc-b/misegr/master/bpmn/camunda.yaml
 
 cd /vagrant
-wget https://raw.githubusercontent.com/mc-b/misegr/master/bpmn/RechnungStep3.bpmn -O data/RechnungStep3.bpmn
+wget https://raw.githubusercontent.com/mc-b/misegr/master/bpmn/RechnungStep3.bpmn -O RechnungStep3.bpmn
 
-sleep 60
+sleep 30
 for i in {1..150}; do # timeout for 5 minutes
    curl -k https://localhost:30443/engine-rest/deployment &> /dev/null
    if [ $? -eq 0 ]; then
