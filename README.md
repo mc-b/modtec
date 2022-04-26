@@ -6,20 +6,18 @@ Für die Beispiele werden folgende Teile benötigt:
 
 ### Quick Start
 
-Installiert [Git/Bash](https://git-scm.com/downloads), [Multipass](https://multipass.run/) und [Terraform](https://www.terraform.io/).
+Installiert [Multipass](https://multipass.run/).
 
-Projekt [modtec](https://github.com/mc-b/modtec), auf der Git/Bash Kommandozeile (CLI), klonen und Installation starten. 
+**Linux & Mac**
 
-    git clone https://github.com/mc-b/modtec
-    cd modtec
-    terraform init
-    terraform apply
+    curl -sfL https://raw.githubusercontent.com/mc-b/modtec/master/cloud-init.yaml | multipass launch --name modtec-30-default -c2 -m8GB -d32GB --cloud-init -
+
+**Windows PowerShell**    
+
+    $wr = Invoke-WebRequest 'https://raw.githubusercontent.com/mc-b/modtec/master/cloud-init.yaml'
+    $wr.content | multipass launch --name modtec-30-default -c2 -m8GB -d32GB --cloud-init -
 
 Öffnet die Interaktive Lernumgebung mittels [http://modtec-30-default.mshome.net:32188](http://modtec-30-default.mshome.net:32188), wechselt in das Verzeichnis `work` und wählt ein Notebook (ipynp Dateien) an.	
-
-Wird die Umgebung nicht mehr gebraucht kann sie wie folgt gelöscht werden:
-
-    terraform destroy
 
 ### Funktionsweise
 
