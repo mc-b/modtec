@@ -6,31 +6,30 @@ Für die Beispiele werden folgende Teile benötigt:
 
 ### Quick Start
 
-Installiert [Git/Bash](https://git-scm.com/downloads), [Vagrant](https://www.vagrantup.com/) und [VirtualBox](https://www.virtualbox.org/).
+Installiert [Git/Bash](https://git-scm.com/downloads), [Multipass](https://multipass.run/) und [Terraform](https://www.terraform.io/).
 
-Projekt [lernkube](https://github.com/mc-b/lernkube), auf der Git/Bash Kommandozeile (CLI), klonen, Konfigurationsdatei `DOK.yaml` kopieren und Installation starten. 
+Projekt [modtec](https://github.com/mc-b/modtec), auf der Git/Bash Kommandozeile (CLI), klonen und Installation starten. 
 
-	git clone https://github.com/mc-b/lernkube
-	cd lernkube
-	cp templates/MODTEC.yaml config.yaml
-	vagrant plugin install vagrant-disksize
-	vagrant up
+    git clone https://github.com/mc-b/modtec
+    cd modtec
+    terraform init
+    terraform apply
 
-Öffnet die Interaktive Lernumgebung mittels [http://localhost:32188](http://localhost:32188), wechselt in das Verzeichnis `work` und wählt ein Notebook (ipynp Dateien) an.	
+Öffnet die Interaktive Lernumgebung mittels [http://modtec-30-default.mshome.net:32188](http://modtec-30-default.mshome.net:32188), wechselt in das Verzeichnis `work` und wählt ein Notebook (ipynp Dateien) an.	
 
-**Weitere Installationsmöglichkeiten und Details** zur Installation siehe Projekt [lernkube](https://github.com/mc-b/lernkube).
+Wird die Umgebung nicht mehr gebraucht kann sie wie folgt gelöscht werden:
+
+    terraform destroy
 
 ### Funktionsweise
+
+![](https://raw.githubusercontent.com/iotkitv3/intro/main/images/edge-ml.png)
+
+- - - 
 
 * [IoTKit](https://github.com/mc-b/iotkitv3) --> MQTT-Protokoll --> [MQTT Broker](https://mosquitto.org/) --> [MQTT-Kafka-Bridge](https://github.com/jacklund/mqttKafkaBridge) 
 --> [Pipe](https://github.com/mc-b/iot.kafka/blob/master/src/main/java/ch/mc_b/iot/kafka/Pipe.java) und [CSVConsumer](https://github.com/mc-b/iot.kafka/blob/master/src/main/java/ch/mc_b/iot/kafka/CSVConsumer.java) und [Alert](https://github.com/mc-b/iot.kafka/blob/master/src/main/java/ch/mc_b/iot/kafka/AlertConsumer.java) 
 
-### Starten
+Die erzeugten Meldungen können im [Kubernetes Dashboard](https://modtec-30-default.mshome.net:8443) angeschaut werden.
 
-	kubectl create -f duk/iot/mosquitto.yaml
-	kubectl create -f duk/kafka
-	kubectl create -f iot.kafka
-	
-In den Entsprechenden Logs der Container stehen die Meldungen drin, z.B.:
-
-	logs iot-kafka-pipe
+Dazu ist `Pods`, dann einen der obigen Services `iot-kafka-*` anzuwählen und dann `Logs`.
