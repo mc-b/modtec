@@ -2,10 +2,6 @@
 #
 #	Installationsscript modtec
 
-# Jupyter Notebooks fuer microk8s statt duk
-kubectl delete -f https://raw.githubusercontent.com/mc-b/duk/master/jupyter/jupyter-base.yaml 
-kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/jupyter/jupyter-base-microk8s.yaml 
-
 # IoT Umgebung 
 kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/iot/mosquitto.yaml
 kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/iot/nodered-kafka.yaml
