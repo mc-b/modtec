@@ -12,14 +12,14 @@ module "master" {
   #source     = "git::https://github.com/mc-b/terraform-lerncloud-azure" 
 
   module      = "modtec-${var.host_no}-${terraform.workspace}"
-  description = "Machine Learning"
+  description = "IoT, Microservices, Machine Learning und DevOps – Moderne architektur-relevante Methoden und Technologien (MODTEC)"
   userdata    = "cloud-init.yaml"
 
   cores   = 2
-  memory  = 8
+  memory  = 16
   storage = 32
   # SSH, Kubernetes, NFS
-  ports   = [22, 6443, 111, 2049]
+  ports      = [ 22, 80, 16443, 25000 ]
 
   # MAAS Server Access Info
   url = var.url
