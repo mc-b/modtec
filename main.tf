@@ -15,7 +15,7 @@ module "master" {
   description = "IoT, Microservices, Machine Learning und DevOps – Moderne architektur-relevante Methoden und Technologien (MODTEC)"
   userdata    = "cloud-init.yaml"
 
-  cores   = 2
+  cores   = 4
   memory  = 16
   storage = 32
   # SSH, Kubernetes, NFS
