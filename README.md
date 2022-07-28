@@ -10,12 +10,11 @@ Installiert [Multipass](https://multipass.run/).
 
 **Linux & Mac**
 
-    curl -sfL https://raw.githubusercontent.com/mc-b/modtec/master/cloud-init.yaml | multipass launch --name modtec-30-default -c2 -m8GB -d32GB --cloud-init -
+    multipass launch --name modtec-30-default -c4 -m16GB -d32GB --cloud-init https://raw.githubusercontent.com/mc-b/modtec/master/cloud-init.yaml
 
 **Windows PowerShell**    
 
-    $wr = Invoke-WebRequest 'https://raw.githubusercontent.com/mc-b/modtec/master/cloud-init.yaml'
-    $wr.content | multipass launch --name modtec-30-default -c2 -m8GB -d32GB --cloud-init -
+    multipass launch --name modtec-30-default -c4 -m16GB -d32GB --cloud-init https://raw.githubusercontent.com/mc-b/modtec/master/cloud-init.yaml
 
 Öffnet die Interaktive Lernumgebung mittels [http://modtec-30-default.mshome.net:32188](http://modtec-30-default.mshome.net:32188), wechselt in das Verzeichnis `work` und wählt ein Notebook (ipynp Dateien) an.	
 
