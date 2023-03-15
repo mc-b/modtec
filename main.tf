@@ -10,10 +10,11 @@ module "master" {
   #source     = "git::https://github.com/mc-b/terraform-lerncloud-lernmaas"  
   #source     = "git::https://github.com/mc-b/terraform-lerncloud-aws"
   #source     = "git::https://github.com/mc-b/terraform-lerncloud-azure" 
+  #source     = "git::https://github.com/mc-b/terraform-lerncloud-proxmox"    
 
   module      = "modtec-${var.host_no}-${terraform.workspace}"
   description = "IoT, Microservices, Machine Learning und DevOps – Moderne architektur-relevante Methoden und Technologien (MODTEC)"
-  userdata    = "cloud-init.yaml"
+  userdata    = "cloud-init-modtec.yaml"
 
   cores   = 4
   memory  = 16
