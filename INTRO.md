@@ -1,4 +1,4 @@
-IoT, Microservices, Machine Learning und DevOps – Moderne architektur-relevante Methoden und Technologien («MODTEC»)
+IoT, Microservices, Machine Learning und AI – Moderne architektur-relevante Methoden und Technologien («MODTEC»)
 ===================================
 
 Umgebung zum Kurs: [IoT, Microservices, Machine Learning und DevOps – Moderne architektur-relevante Methoden und Technologien («MODTEC»)](https://github.com/mc-b/modtec).
@@ -6,8 +6,7 @@ Umgebung zum Kurs: [IoT, Microservices, Machine Learning und DevOps – Moderne 
 Services
 --------
 
-* https://${fqdn}:8443 - Kubernetes Dashboard (kein Token notwendig, Überspringen drücken)
-* http://${fqdn}:32188 - Beispiele Infrastruktur (Jupyter Notebooks)
-* http://${fqdn}:32088 - Beispiele Machine Learning (Jupyter Notebooks)
-* http://${fqdn}:32600 - Node-RED
+* https://${fqdn}:8443                  - Kubernetes Dashboard (kein Token notwendig, Überspringen drücken)
+* http://${fqdn}:32188/tree/work        - Beispiele Infrastruktur (Jupyter Notebooks)
+* http://${fqdn}:32188/tree/work/mlg    - Beispiele Machine Learning (Jupyter Notebooks)
 
