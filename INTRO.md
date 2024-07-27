@@ -11,3 +11,7 @@ Services
 * http://${fqdn}:32188/tree/work/mlg    - Beispiele Machine Learning (Jupyter Notebooks)
 * https://${fqdn}:4200                  - Terminal im Browser. User: ubuntu, Password insecure
 
+SSH Access
+
+    ssh ubuntu@${fqdn}
+
