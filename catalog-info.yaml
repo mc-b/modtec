@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: modtec
+  namespace: mc-b
+  description: 'Kurs: Moderne Technologien mit IoT, AI, Container, Kubernetes'
+  tags:
+  - containers
+  - ioe
+  - iot
+  - kubernetes
+  - messaging
+  - education
+  links:
+  - url: https://github.com/mc-b/modtec
+    title: Repository
+    icon: github
+  annotations:
+    github.com/project-slug: mc-b/modtec
+    backstage.io/source-location: url:https://github.com/mc-b/modtec
+    backstage.io/techdocs-ref: url:https://github.com/mc-b/modtec
+spec:
+  type: education
+  lifecycle: production
+  owner: group:mc-b/mc-b
