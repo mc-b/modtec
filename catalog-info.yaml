@@ -18,7 +18,7 @@ metadata:
   annotations:
     github.com/project-slug: mc-b/modtec
     backstage.io/source-location: url:https://github.com/mc-b/modtec
-    backstage.io/techdocs-ref: url:https://github.com/mc-b/modtec
+    # backstage.io/techdocs-ref: url:https://github.com/mc-b/modtec
 spec:
   type: education
   lifecycle: production
