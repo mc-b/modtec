@@ -6,12 +6,11 @@ Umgebung zum Kurs: [IoT, Microservices, Machine Learning und DevOps – Moderne 
 Services
 --------
 
-* https://${fqdn}:8443                  - Kubernetes Dashboard (kein Token notwendig, Überspringen drücken)
-* http://${fqdn}:32188/tree/work        - Beispiele Infrastruktur (Jupyter Notebooks)
-* http://${fqdn}:32188/tree/work/mlg    - Beispiele Machine Learning (Jupyter Notebooks)
-* https://${fqdn}:4200                  - Terminal im Browser. User: ubuntu, Password insecure
+* http://${fqdn}:32188/tree/modtec/data/README.ipynb    - Beispiele Infrastruktur (Jupyter Notebooks)
+* https://${fqdn}:8443                                  - Kubernetes Dashboard (kein Token notwendig, Überspringen drücken)
+* https://${fqdn}:4200                                  - Terminal im Browser. User: ubuntu, Password insecure
 
 SSH Access
 
-    ssh ubuntu@${fqdn}
+    ssh -i ssh/lerncloud ubuntu@${fqdn}    
 
