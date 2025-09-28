@@ -66,10 +66,10 @@ write_files:
     permissions: '0644'
     content: |
       [Unit]
-      Description=Run MicroK8s reset daily at 04:00 (catch up if missed)
+      Description=Run MicroK8s reset daily at 00:30 (catch up if missed)
 
       [Timer]
-      OnCalendar=*-*-* 04:00:00
+      OnCalendar=*-*-* 00:30:00
       Persistent=true
       Unit=microk8s-reset.service
 
