@@ -22,7 +22,7 @@ metadata:
     # backstage.io/techdocs-ref: url:https://github.com/mc-b/modtec
 spec:
   type: website
-  lifecycle: production
+  lifecycle: deprecated
   owner: group:mc-b/mc-b
   dependsOn:
   - component:mc-b/lerncloud   
